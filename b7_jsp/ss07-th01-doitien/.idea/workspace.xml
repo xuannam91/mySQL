@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="44599e3d-bd86-4624-af7b-6304b6e2f331" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../ql_nhanvien/src/main/java/com/ra/controller/EmployeeServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ql_nhanvien/src/main/java/com/ra/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ql_nhanvien/src/main/webapp/view/add.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ql_nhanvien/src/main/webapp/view/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ql_nhanvien/src/main/webapp/view/employee.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss07-bt02/src/main/java/com/example/ss07bt02/CalculatorServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss07-bt02/src/main/webapp/calculator.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/converter.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss07_bt1/src/main/java/com/example/ss07_bt1/Customers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ss07_bt1/src/main/webapp/customer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b8_mvc/luyentap-mvc-jdbc/src/main/java/com/example/controller/StudentServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b8_mvc/luyentap-mvc-jdbc/src/main/java/com/example/model/dao/IGenericDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b8_mvc/luyentap-mvc-jdbc/src/main/java/com/example/model/dao/StudentDAOimp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b8_mvc/luyentap-mvc-jdbc/src/main/java/com/example/model/entity/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b8_mvc/luyentap-mvc-jdbc/src/main/java/com/example/model/service/IGenericService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b8_mvc/luyentap-mvc-jdbc/src/main/java/com/example/model/service/StudentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b8_mvc/luyentap-mvc-jdbc/src/main/java/com/example/util/ConnectionDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b8_mvc/luyentap-mvc-jdbc/src/main/webapp/views/student-edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b8_mvc/luyentap-mvc-jdbc/src/main/webapp/views/student.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b8_mvc/luyentap-mvc-jdbc/src/main/webapp/views/student_add.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b8_mvc/ss08-mvc/src/main/java/com/ra/controller/StudentServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b8_mvc/ss08-mvc/src/main/java/com/ra/model/dao/IGenericDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b8_mvc/ss08-mvc/src/main/java/com/ra/model/dao/StudentDAOimp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b8_mvc/ss08-mvc/src/main/java/com/ra/model/entity/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b8_mvc/ss08-mvc/src/main/java/com/ra/model/service/IGenericService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b8_mvc/ss08-mvc/src/main/java/com/ra/model/service/StudentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b8_mvc/ss08-mvc/src/main/java/com/ra/util/ConnectionDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b8_mvc/ss08-mvc/src/main/webapp/views/student-add.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b8_mvc/ss08-mvc/src/main/webapp/views/student-edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b8_mvc/ss08-mvc/src/main/webapp/views/student.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../b6_web/thss06_01/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../b6_web/thss06_01/.idea/gradle.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2Y5AXgCDDx532sOzrYP70QS4ynd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.43" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.43" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment>
+        <artifact name="Gradle : com.example : ss07-th01-doitien-1.0-SNAPSHOT.war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/Gradle___com_example___ss07_th01_doitien_1_0_SNAPSHOT_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="0956ae00-1311-43a3-acbc-5c4829ed2425" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : com.example : ss07-th01-doitien-1.0-SNAPSHOT.war" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="44599e3d-bd86-4624-af7b-6304b6e2f331" name="Changes" comment="" />
+      <created>1699805108703</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1699805108703</updated>
+      <workItem from="1699805109745" duration="321000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
