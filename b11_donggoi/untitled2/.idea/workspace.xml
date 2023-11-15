@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ceead115-ec54-45df-9210-024ae949f40f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../b10_jdbc_query/demo_donggoi/src/main/java/com/example/demo_donggoi/QuadraticEquation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b10_jdbc_query/qlsv-query/src/main/java/com/ra/controller/ClassController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b10_jdbc_query/qlsv-query/src/main/java/com/ra/controller/StudentServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b10_jdbc_query/qlsv-query/src/main/java/com/ra/dto/StudentDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b10_jdbc_query/qlsv-query/src/main/java/com/ra/model/dao/ClassRoomDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b10_jdbc_query/qlsv-query/src/main/java/com/ra/model/dao/IGenericDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b10_jdbc_query/qlsv-query/src/main/java/com/ra/model/dao/StudentDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b10_jdbc_query/qlsv-query/src/main/java/com/ra/model/entity/ClassRoom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b10_jdbc_query/qlsv-query/src/main/java/com/ra/model/entity/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b10_jdbc_query/qlsv-query/src/main/java/com/ra/service/ClassService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b10_jdbc_query/qlsv-query/src/main/java/com/ra/service/IGenericService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b10_jdbc_query/qlsv-query/src/main/java/com/ra/service/StudentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b10_jdbc_query/qlsv-query/src/main/java/com/ra/util/ConnectionDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b10_jdbc_query/qlsv-query/src/main/webapp/views/add-student.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b10_jdbc_query/qlsv-query/src/main/webapp/views/classroom.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b10_jdbc_query/qlsv-query/src/main/webapp/views/edit-student.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../b10_jdbc_query/qlsv-query/src/main/webapp/views/student.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../b8_mvc/luyentap-mvc-jdbc/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../b8_mvc/luyentap-mvc-jdbc/.idea/misc.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2YBtXPlBhJM3Fjmb4WJMWeePBVT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Database/b11_donggoi/untitled1/out/artifacts/untitled1_jar/untitled1.jar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.36187562",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ceead115-ec54-45df-9210-024ae949f40f" name="Changes" comment="" />
+      <created>1700010841528</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700010841528</updated>
+      <workItem from="1700010842551" duration="72000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
