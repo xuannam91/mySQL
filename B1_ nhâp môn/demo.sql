@@ -33,7 +33,7 @@ VALUES ('Iphone 13 prm', 200, 10, 1),('Mac 15 prm', 200, 10, 1) ;
 -- drop table product;
 
 
--- Thao tác sửa db
+-- Thao tác sửa db 
 -- thêm mới cột vào bảng
 ALTER TABLE product
 ADD descriptions text;
@@ -68,7 +68,7 @@ quantity int
 -- Xoá khoá chính
 ALTER TABLE cart
 DROP PRIMARY KEY;
-
+	
 -- Thêm khoá ngoại
 ALTER TABLE cart
 ADD FOREIGN KEY (`product_id`)
@@ -79,8 +79,8 @@ ALTER TABLE cart
 DROP FOREIGN KEY cart_ibfk_1;
         
         
+        
 -- 2. THAO TÁC VỚI DỮ LIỆU
-
 -- thay đổi dữ liệu
 UPDATE products 
 SET product_name = 'Uy', price = 30, quantity = 20, category_id = 2
