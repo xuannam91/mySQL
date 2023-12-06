@@ -4,6 +4,7 @@ import com.ra.dto.response.ResponseUserLoginDTO;
 import com.ra.model.dao.OrderDAO;
 import com.ra.model.entity.CartItem;
 import com.ra.model.entity.Order;
+import com.ra.model.entity.OrderDetail;
 import com.ra.model.entity.User;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,7 @@ public class OrderServiceimpl implements OrderService{
     @Autowired
     HttpSession httpSession;
     @Override
-    public Boolean createOrder(Order order) {
+    public int createOrder(Order order) {
 
         List<CartItem> cartItemList = (List<CartItem>) httpSession.getAttribute("cart");
         ResponseUserLoginDTO responseUserLoginDTO = (ResponseUserLoginDTO) httpSession.getAttribute("username");
@@ -36,11 +37,28 @@ public class OrderServiceimpl implements OrderService{
                 order.setTotalAmount(totalAmount);
                 order.setUser(user);
                 order.setTotalPrice(totalPrice);
-                return orderDAO.createOrder(order );
+
+                int idOrder = orderDAO.createOrder(order);
+
+                Order order1 = orderDAO.findByIdOrder(idOrder);
+                if( order1 != null){
+                    for (CartItem cartItem : cartItemList) {
+                        OrderDetail orderDetail = new OrderDetail();
+                        orderDetail.setOrder(order1);
+                        orderDetail.setProduct(cartItem.getProduct());
+                        orderDetail.setQuantity(cartItem.getQuantity());
+                        orderDetail.setPrice(cartItem.getProduct().getPrice());
+                        orderDAO.addOrderDetail(orderDetail);
+                    }
+                }
+                return idOrder;
             }
         }
-        return false;
+        return orderDAO.createOrder(order );
     }
+
+
+
 
     @Override
     public List<Order> allOrder() {

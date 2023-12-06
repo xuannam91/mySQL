@@ -46,7 +46,7 @@ public class OrderController {
     }
     @PostMapping("/checkout")
     public String postCheckout(@ModelAttribute("order") Order order, HttpSession httpSession){
-        if(orderService.createOrder(order)){
+        if(orderService.createOrder(order) > 0){
             httpSession.removeAttribute("cart");
             return "redirect:/";
         }

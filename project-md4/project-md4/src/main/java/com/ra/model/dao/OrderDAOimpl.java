@@ -1,17 +1,13 @@
 package com.ra.model.dao;
 
 import com.ra.dto.response.ResponseUserLoginDTO;
-import com.ra.model.entity.Order;
-import com.ra.model.entity.User;
+import com.ra.model.entity.*;
 import com.ra.util.ConnectionDB;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import java.sql.CallableStatement;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,12 +15,14 @@ import java.util.List;
 public class OrderDAOimpl implements OrderDAO{
 @Autowired
 private UserDAO userDAO;
+@Autowired
+private ProductDAO productDAO;
     @Override
-    public Boolean createOrder(Order order) {
+    public int createOrder(Order order) {
         Connection connection = null;
         connection = ConnectionDB.openConnection();
         try {
-            CallableStatement callableStatement = connection.prepareCall("CALL PRO_InsertOrder(?,?,?,?,?,?,?)");
+            CallableStatement callableStatement = connection.prepareCall("CALL PRO_InsertOrder(?,?,?,?,?,?,?,?)");
             callableStatement.setInt(1,order.getUser().getUserId());
             callableStatement.setDouble(2,order.getTotalAmount());
             callableStatement.setString(3,order.getName());
@@ -33,17 +31,88 @@ private UserDAO userDAO;
             callableStatement.setString(6,order.getAddress());
             callableStatement.setDouble(7,order.getTotalPrice());
 
-            int rs = callableStatement.executeUpdate();
-            if(rs > 0){
-                return true;
-            }
+            // Đăng ký tham số OUT để nhận giá trị trả về
+            callableStatement.registerOutParameter(8, Types.INTEGER);
+
+            callableStatement.executeUpdate();
+
+            // Lấy giá trị trả về từ tham số OUT
+            int orderId = callableStatement.getInt(8);
+            return orderId;
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }finally {
             ConnectionDB.closeConnection(connection);
         }
-        return false;
+
     }
+
+//    thêm vào orderdetail
+@Override
+    public Boolean addOrderDetail(OrderDetail orderDetail) {
+        Connection connection = null;
+        connection = ConnectionDB.openConnection();
+    try {
+        CallableStatement callableStatement = connection.prepareCall("CALL ADD_ORDER_DETAIL(?,?,?,?)");
+        callableStatement.setInt(1,orderDetail.getOrder().getOrderId());
+        callableStatement.setInt(2,orderDetail.getProduct().getProductId());
+        callableStatement.setInt(3,orderDetail.getQuantity());
+        callableStatement.setDouble(4,orderDetail.getPrice());
+
+        int rs = callableStatement.executeUpdate();
+        if(rs > 0){
+            return true;
+        }
+    } catch (SQLException e) {
+        throw new RuntimeException(e);
+    }finally {
+        ConnectionDB.closeConnection(connection);
+    }
+    return false;
+}
+
+
+
+// Tìm kiếm một order
+@Override
+public Order findByIdOrder(Integer id) {
+    Connection connection = null;
+    Order order = null;
+    connection = ConnectionDB.openConnection();
+    try {
+        CallableStatement callableStatement = connection.prepareCall("CALL GetOrderByID(?)");
+        callableStatement.setInt(1,id);
+        ResultSet rs = callableStatement.executeQuery();
+        while (rs.next()){
+            order = new Order();
+            order.setOrderId(rs.getInt("orderId"));
+
+            User user = userDAO.findById(rs.getInt("userId"));
+            order.setUser(user);
+
+            order.setTotalAmount(rs.getDouble("totalAmount"));
+            order.setOrderDate(rs.getDate("orderDate"));
+            order.setName(rs.getString("name"));
+            order.setEmail(rs.getString("email"));
+            order.setPhone(rs.getString("phone"));
+            order.setAddress(rs.getString("address"));
+            order.setTotalPrice(rs.getDouble("totalPrice"));
+        }
+    } catch (SQLException e) {
+        throw new RuntimeException(e);
+    }finally {
+        ConnectionDB.closeConnection(connection);
+    }
+    return order;
+}
+
+
+
+
+
+
+
+
 
     @Override
     public List<Order> allOrder(){
