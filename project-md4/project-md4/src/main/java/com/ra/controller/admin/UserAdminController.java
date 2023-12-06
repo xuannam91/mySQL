@@ -15,6 +15,8 @@ import java.util.List;
 public class UserAdminController {
     @Autowired
     private UserService userService;
+
+    // Hiển thị danh sách
     @RequestMapping("/useradmin")
     public String listuser(Model model){
         List<ResponseUserLoginDTO> list = userService.listUser();
@@ -22,6 +24,7 @@ public class UserAdminController {
         return "admin/users/listuser";
     }
 
+    // khoá user
     @RequestMapping("/lockuser/{id}")
     public String lockuser(@PathVariable("id") Integer id){
         userService.lockuser(id);

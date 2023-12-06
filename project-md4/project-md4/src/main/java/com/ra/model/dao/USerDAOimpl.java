@@ -59,7 +59,7 @@ public class USerDAOimpl implements UserDAO{
                 if (rs.next()) {
                     String hashedPasswordFromDB = rs.getString("password");
                     String enteredPassword = userLoginDTO.getPassword();
-                    if (BCrypt.checkpw(enteredPassword, hashedPasswordFromDB)) {
+                    if (BCrypt.checkpw(enteredPassword, hashedPasswordFromDB) ) {
                         user1 = new User();
                         user1.setUserId(rs.getInt("userId"));
                         user1.setUserName(rs.getString("userName"));
@@ -68,8 +68,8 @@ public class USerDAOimpl implements UserDAO{
                         user1.setPhone(rs.getString("phone"));
                         user1.setRole(rs.getByte("role"));
                         user1.setStatus(rs.getByte("status"));
-
                     }
+                    return user1;
                 }
             }
         } catch (SQLException e) {
@@ -78,7 +78,6 @@ public class USerDAOimpl implements UserDAO{
             ConnectionDB.closeConnection(connection);
         }
         return user1;
-
     }
 
 
@@ -135,15 +134,6 @@ public class USerDAOimpl implements UserDAO{
 
 
 
-
-
-
-
-
-
-
-
-
 // lấy về danh sách người dùng
     @Override
     public List<User> listUser(){
@@ -194,7 +184,6 @@ public class USerDAOimpl implements UserDAO{
         }finally {
             ConnectionDB.closeConnection(connection);
         }
-
         return list;
     }
 

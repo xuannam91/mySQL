@@ -52,6 +52,7 @@ public class ProductController {
         File destination = new File(path+"/"+fileNane);
         try {
             file.transferTo(destination);
+
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -73,8 +74,10 @@ public class ProductController {
 
 
     @RequestMapping("/update-product/{id}")
-    public String update(@PathVariable("id") int id, @ModelAttribute("product") Product product, @RequestParam("img_upload")
-    MultipartFile fileup, HttpServletRequest request) {
+    public String update(@PathVariable("id") int id, @ModelAttribute("product") Product product,
+                         @RequestParam("img_upload")
+                         MultipartFile fileup,
+                         HttpServletRequest request) {
 
         // Lấy thông tin sản phẩm hiện tại từ cơ sở dữ liệu
         Product existingProduct = productService.findById(id);

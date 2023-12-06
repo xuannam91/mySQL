@@ -6,6 +6,22 @@
 
 
 <body class="inblog-page">
+
+<!-- Thông báo từ Controller -->
+<div th:if="${not #strings.isEmpty(message)}">
+    <script th:inline="javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            var message = [[${message}]];
+            Swal.fire({
+                icon: 'error',
+                title: 'Thất bại',
+                text: message,
+            });
+        });
+    </script>
+</div>
+
+
 <th:block th:insert="users/layouts/header.html"></th:block>
 
 <div class="header-device-mobile">

@@ -44,7 +44,8 @@
                 <div class="form-group">
                     <label >Image</label>
                     <input type="file" src="" alt="" name="img_upload">
-                    <img src="<%=request.getContextPath()%>/uploads/images/${product.image}" alt=""/>                </div>
+                    <img src="<%=request.getContextPath()%>/uploads/images/${product.image}" alt=""/>
+                </div>
 
 
                 <button type="submit" class="btn btn-outline-dark">Update product</button>

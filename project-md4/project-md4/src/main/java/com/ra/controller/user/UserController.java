@@ -59,8 +59,8 @@ public class UserController {
 
     @PostMapping("/login")
     public String postLogin(@ModelAttribute("userLoginDTO") UserLoginDTO UserLoginDTO,
+                            Model model,
                             HttpSession httpSession,
-                            RedirectAttributes redirectAttributes,
                             @RequestParam( required = false, name = "checked") Boolean isCheck,
                             HttpServletResponse response, HttpServletRequest request){
 
@@ -86,14 +86,17 @@ public class UserController {
 
         }
 
-
-
-        if(user2 != null){
+        if(user2 != null && user2.getStatus() == 0){
             httpSession.setAttribute("username", user2);
+            model.addAttribute("message", "Đăng nhập thành công");
             return "redirect:/";
         }
-//        redirectAttributes.addFlashAttribute("err","Sai thông tin đăng nhập");
-        return  "redirect:/login";
+        if(user2 != null && user2.getStatus() == 1){
+            model.addAttribute("message", "Tài khoản bị khoá");
+            return  "users/login";
+        }
+        model.addAttribute("message", "Email hoặc mật khẩu không chính xác");
+        return  "users/login";
 
     }
 
@@ -102,6 +105,7 @@ public class UserController {
     @GetMapping("/logout")
     public String logout(HttpSession session){
         session.removeAttribute("username");
+        session.removeAttribute("cart");
         return "redirect:/";
     }
 
