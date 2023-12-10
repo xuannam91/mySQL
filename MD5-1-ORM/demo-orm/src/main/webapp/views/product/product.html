@@ -42,26 +42,29 @@
         </form>
     </div>
 </nav>
-<a class="btn btn-primary" href="/addUser"><span th:text="#{add}"></span></a>
+<a class="btn btn-primary" href="/addProduct"><span th:text="#{add}"></span></a>
 
 <table class="table">
     <thead>
     <tr>
         <th>STT</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Action</th>
+        <th>ProductName</th>
+        <th>Price</th>
+        <th>Descriptiom</th>
+        <th>CategoryName</th>
     </tr>
     </thead>
     <tbody>
 
     <tr th:each="item,index:${list}">
         <td th:text="${index.count}"></td>
-        <td th:text="${item.userName}"></td>
-        <td th:text="${item.email}"></td>
+        <td th:text="${item.productName}"></td>
+        <td th:text="${item.price}"></td>
+        <td th:text="${item.description}"></td>
+        <td th:text="${item.category.categoryName}"></td>
         <td>
-            <a th:href="@{'/update/'+${item.id}}" class="btn btn-primary">Edit</a>
-            <a th:href="@{'/delete/'+${item.id}}" class="btn btn-danger">Xoá</a>
+            <a th:href="@{'/update-product/'+${item.productId}}" class="btn btn-primary">Edit</a>
+            <a th:href="@{'/delete-product/'+${item.productId}}" class="btn btn-danger">Xoá</a>
         </td>
 
 

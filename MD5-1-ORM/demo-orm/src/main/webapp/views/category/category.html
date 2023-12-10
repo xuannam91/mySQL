@@ -42,14 +42,13 @@
         </form>
     </div>
 </nav>
-<a class="btn btn-primary" href="/addUser"><span th:text="#{add}"></span></a>
-
+<a class="btn btn-primary" href="/addCategory"><span th:text="#{add}"></span></a>
 <table class="table">
     <thead>
     <tr>
         <th>STT</th>
-        <th>Name</th>
-        <th>Email</th>
+        <th>CategoryName</th>
+        <th>CategoryStatus</th>
         <th>Action</th>
     </tr>
     </thead>
@@ -57,11 +56,11 @@
 
     <tr th:each="item,index:${list}">
         <td th:text="${index.count}"></td>
-        <td th:text="${item.userName}"></td>
-        <td th:text="${item.email}"></td>
+        <td th:text="${item.categoryName}"></td>
+        <td th:text="${item.categoryStatus == true ? 'Hiện' :'Ẩn'}"></td>
         <td>
-            <a th:href="@{'/update/'+${item.id}}" class="btn btn-primary">Edit</a>
-            <a th:href="@{'/delete/'+${item.id}}" class="btn btn-danger">Xoá</a>
+            <a th:href="@{'/update-category/'+${item.categoryId}}" class="btn btn-primary">Edit</a>
+            <a th:href="@{'/delete-category/'+${item.categoryId}}" class="btn btn-danger">Xoá</a>
         </td>
 
 
