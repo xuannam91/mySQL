@@ -9,4 +9,6 @@ public interface CategoryService {
     Category findById(Integer id);
     Category save(Category category);
     void delete(Integer id);
+
+    List<Category> findByName(String name);
 }

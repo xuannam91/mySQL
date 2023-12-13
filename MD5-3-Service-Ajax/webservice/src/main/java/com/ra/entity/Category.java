@@ -15,6 +15,7 @@ public class Category {
     private Boolean categoryStatus;
 
     @OneToMany(mappedBy = "category", fetch = FetchType.LAZY)
+    @Transient
     private List<Product> products;
 
     public Category() {

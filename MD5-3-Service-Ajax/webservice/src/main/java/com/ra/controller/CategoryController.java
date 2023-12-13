@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin("*")
 @RequestMapping("/category")
 public class CategoryController {
     @Autowired
@@ -55,6 +56,17 @@ public class CategoryController {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+    // tìm kiếm
+    @GetMapping("/search")
+    public ResponseEntity<List<Category>> searchByName(@RequestParam("name") String name){
+        List<Category> categories = categoryService.findByName(name);
+
+        if (categories.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+
+        return new ResponseEntity<>(categories, HttpStatus.OK);
     }
 
 }

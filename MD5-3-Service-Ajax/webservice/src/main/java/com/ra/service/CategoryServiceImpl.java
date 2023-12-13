@@ -33,4 +33,9 @@ public class CategoryServiceImpl implements CategoryService{
     public void delete(Integer id) {
         categoryRepository.deleteById(id);
     }
+
+    @Override
+    public List<Category> findByName(String name) {
+        return categoryRepository.findByCategoryNameContaining(name);
+    }
 }
